@@ -5,7 +5,7 @@ class AppDelegate
   end
 
   def buildWindow
-    @mainWindowController = MainWindow.alloc.initWithWindowNibName('Messages')
-    @mainWindowController.window.makeKeyAndOrderFront(self)
+    @main = MessagesWindow.alloc.initWithWindowNibName('Messages')
+    @main.window.makeKeyAndOrderFront(self)
   end
 end

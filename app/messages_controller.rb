@@ -1,7 +1,7 @@
-class MainWindow < NSWindowController
+class MessagesWindow < NSWindowController
   extend IB
 
-  outlet :button, NSButton
+  outlet :my_button, NSButton
 
   def windowDidLoad
     @button.bordered = false
