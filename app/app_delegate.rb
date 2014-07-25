@@ -6,6 +6,9 @@ class AppDelegate
 
   def buildWindow
     @main = MessagesWindow.alloc.initWithWindowNibName('Messages')
-    @main.window.makeKeyAndOrderFront(self)
+    
+    # p '-------------------- ' + @main.window.inspect
+    # # @main.makeKeyAndOrderFront(self)
+    @main.window
   end
 end
