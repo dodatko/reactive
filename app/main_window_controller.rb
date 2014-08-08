@@ -1,50 +1,26 @@
 class MessagesWindow < NSWindowController
   extend IB
 
-  outlet :button, NSButton
-  outlet :message_table, NSTableView
+  # outlet :button, NSButton
+  # outlet :message_table, NSTableView
+
+  outlet :messagesController, NSArrayController
+  attr_accessor :messages
+  attr_accessor :selected
 
   def windowDidLoad
-    @messages = Message.generateDumbData(100)
-    
-    @message_table.delegate = self
-    @message_table.dataSource = self
-    @message_table.reloadData #important
+    @messages = Message.generateDumb 3
+    @selected = []
+    @messagesController.content = @messages
   end
 
-  def foo123(sender)
-    puts 'bar!'
-  end
-  
-  def numberOfRowsInTableView(table_view)
-    @messages.count
+  def add_new_message sender
+    @messagesController.addObject Message.generateDumb
   end
 
-  # def tableView(table_view, objectValueForTableColumn:table_column, row:row)
-  #   p 'getting data for row ' + row.to_s
-  #   'Row ' + row.to_s
-  # end
-
-  # Table View Delegates
-  def tableView(table_view, heightOfRow:row)
-    100
+  def inspect sender
+    p messagesController.selectedObjects.inspect
+    p @selected.inspect
   end
 
-  def tableView(tableView, viewForTableColumn:tableColumn, row:row)
-    # p 'creating cell for row ' + row.to_s
-    
-    @cell_identifier ||= "message-cell"
-    cellView = tableView.makeViewWithIdentifier(@cell_identifier, owner:self)
-    # p 'getting data for row ' + row.to_s
-    message = @messages[row]
-    p message.sender
-    cellView.sender.stringValue = message.sender
-    cellView.subject.stringValue = message.subject
-    cellView.sent.stringValue = message.sent
-    cellView.body.stringValue = message.body
-    
-    return cellView
-  end
-  
 end
-
