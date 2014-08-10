@@ -1,0 +1,10 @@
+PODS:
+  - RFOverlayScrollView (0.3)
+
+DEPENDENCIES:
+  - RFOverlayScrollView
+
+SPEC CHECKSUMS:
+  RFOverlayScrollView: f7ea640278e9882c8b2d9d3a957c9630d93418dd
+
+COCOAPODS: 0.32.1

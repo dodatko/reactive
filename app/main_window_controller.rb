@@ -1,15 +1,14 @@
 class MessagesWindow < NSWindowController
   extend IB
 
-  # outlet :button, NSButton
-  # outlet :message_table, NSTableView
-
   outlet :messagesController, NSArrayController
+  outlet :tableScrollView, NSScrollView
+
   attr_accessor :messages
   attr_accessor :selected
 
   def windowDidLoad
-    @messages = Message.generateDumb 3
+    @messages = Message.generateDumb 100
     @selected = []
     @messagesController.content = @messages
   end
@@ -21,6 +20,10 @@ class MessagesWindow < NSWindowController
   def inspect sender
     p messagesController.selectedObjects.inspect
     p @selected.inspect
+  end
+  
+  def segment_button sender
+    p sender.selectedSegment.inspect
   end
 
 end
