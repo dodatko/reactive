@@ -21,60 +21,18 @@
                 <rect key="frame" x="0.0" y="0.0" width="964" height="721"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="9ZL-Zf-1qi">
-                        <rect key="frame" x="14" y="673" width="97" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="85" id="aVT-pa-Paw"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="New" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="t9P-ca-4MP">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="add_new_message:" target="-2" id="acN-po-Sua"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rqU-ZR-2Hb">
-                        <rect key="frame" x="111" y="673" width="97" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="85" id="8I3-zd-0Af"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="Remove" bezelStyle="rounded" alignment="center" state="on" borderStyle="border" inset="2" id="4Nk-Tu-hqf">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="remove:" target="8aN-MI-QYU" id="ji7-h7-O0q"/>
-                        </connections>
-                    </button>
-                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aCn-u6-Jog">
-                        <rect key="frame" x="208" y="673" width="91" height="32"/>
-                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                        <constraints>
-                            <constraint firstAttribute="width" constant="79" id="4ON-PV-sWc"/>
-                        </constraints>
-                        <buttonCell key="cell" type="push" title="Inspect" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Cwg-BN-cYD">
-                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                            <font key="font" metaFont="system"/>
-                        </buttonCell>
-                        <connections>
-                            <action selector="inspect:" target="-2" id="sty-QZ-SWa"/>
-                        </connections>
-                    </button>
-                    <splitView dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRb-I6-Jnx">
+                    <splitView ambiguous="YES" misplaced="YES" dividerStyle="thin" vertical="YES" translatesAutoresizingMaskIntoConstraints="NO" id="NRb-I6-Jnx">
                         <rect key="frame" x="20" y="16" width="924" height="650"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <subviews>
-                            <customView id="7F0-GM-dX9">
+                            <customView ambiguous="YES" misplaced="YES" id="7F0-GM-dX9">
                                 <rect key="frame" x="0.0" y="0.0" width="263" height="650"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <scrollView borderType="none" autohidesScrollers="YES" horizontalLineScroll="82" horizontalPageScroll="10" verticalLineScroll="82" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-CU-OmF" customClass="RFOverlayScrollView">
+                                    <scrollView ambiguous="YES" misplaced="YES" borderType="none" autohidesScrollers="YES" horizontalLineScroll="82" horizontalPageScroll="10" verticalLineScroll="82" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xzb-CU-OmF" customClass="RFOverlayScrollView">
                                         <rect key="frame" x="1" y="0.0" width="262" height="648"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                                        <clipView key="contentView" drawsBackground="NO" id="TRi-v1-1sT">
+                                        <clipView key="contentView" ambiguous="YES" misplaced="YES" drawsBackground="NO" id="TRi-v1-1sT">
                                             <rect key="frame" x="0.0" y="0.0" width="262" height="648"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
@@ -210,11 +168,11 @@
                                     <constraint firstItem="Xzb-CU-OmF" firstAttribute="top" secondItem="7F0-GM-dX9" secondAttribute="top" constant="2" id="g2c-pr-A61"/>
                                 </constraints>
                             </customView>
-                            <customView id="NvW-n8-8m4">
+                            <customView ambiguous="YES" misplaced="YES" id="NvW-n8-8m4">
                                 <rect key="frame" x="264" y="0.0" width="660" height="650"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <subviews>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="5jb-ju-kKL">
+                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5jb-ju-kKL">
                                         <rect key="frame" x="44" y="618" width="596" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <constraints>
@@ -229,7 +187,7 @@
                                             <binding destination="8aN-MI-QYU" name="value" keyPath="selection.sender" id="n7P-rW-oBv"/>
                                         </connections>
                                     </textField>
-                                    <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1g8-Jc-nYY">
+                                    <textField verticalHuggingPriority="750" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="1g8-Jc-nYY">
                                         <rect key="frame" x="44" y="586" width="596" height="22"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                         <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="JyV-lh-ZaN">
@@ -241,14 +199,14 @@
                                             <binding destination="8aN-MI-QYU" name="value" keyPath="selection.subject" id="htx-Ss-4v1"/>
                                         </connections>
                                     </textField>
-                                    <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-HK-0ns" customClass="RFOverlayScrollView">
+                                    <scrollView ambiguous="YES" misplaced="YES" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eI1-HK-0ns" customClass="RFOverlayScrollView">
                                         <rect key="frame" x="0.0" y="0.0" width="660" height="573"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <clipView key="contentView" drawsBackground="NO" copiesOnScroll="NO" id="ojp-JL-cRn">
+                                        <clipView key="contentView" ambiguous="YES" misplaced="YES" drawsBackground="NO" copiesOnScroll="NO" id="ojp-JL-cRn">
                                             <rect key="frame" x="0.0" y="0.0" width="645" height="573"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <subviews>
-                                                <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JqH-Xb-M9s">
+                                                <textView ambiguous="YES" importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" spellingCorrection="YES" smartInsertDelete="YES" id="JqH-Xb-M9s">
                                                     <rect key="frame" x="0.0" y="0.0" width="645" height="573"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -292,8 +250,8 @@
                             <real value="250"/>
                         </holdingPriorities>
                     </splitView>
-                    <segmentedControl verticalHuggingPriority="750" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-s1-dFj">
-                        <rect key="frame" x="331" y="678" width="215" height="25"/>
+                    <segmentedControl verticalHuggingPriority="750" fixedFrame="YES" allowsExpansionToolTips="YES" translatesAutoresizingMaskIntoConstraints="NO" id="TyQ-s1-dFj">
+                        <rect key="frame" x="20" y="677" width="215" height="25"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                         <segmentedCell key="cell" alignment="left" style="texturedSquare" trackingMode="momentary" id="q0y-dn-xoZ">
                             <font key="font" metaFont="system"/>
@@ -304,23 +262,13 @@
                             </segments>
                         </segmentedCell>
                         <connections>
-                            <action selector="segment_button:" target="-2" id="BRj-Eb-the"/>
+                            <action selector="action:" target="-2" id="Ewo-Q1-ZnK"/>
                         </connections>
                     </segmentedControl>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="9ZL-Zf-1qi" firstAttribute="leading" secondItem="EiT-Mj-1SZ" secondAttribute="leading" constant="20" symbolic="YES" id="1La-bm-22b"/>
                     <constraint firstAttribute="bottom" secondItem="NRb-I6-Jnx" secondAttribute="bottom" constant="16" id="2ZW-1b-b95"/>
-                    <constraint firstItem="NRb-I6-Jnx" firstAttribute="leading" secondItem="9ZL-Zf-1qi" secondAttribute="leading" id="6Hw-5e-uiQ"/>
                     <constraint firstAttribute="trailing" secondItem="NRb-I6-Jnx" secondAttribute="trailing" constant="20" symbolic="YES" id="FVJ-Zp-Tgs"/>
-                    <constraint firstItem="9ZL-Zf-1qi" firstAttribute="baseline" secondItem="rqU-ZR-2Hb" secondAttribute="baseline" id="MkH-Lx-hFz"/>
-                    <constraint firstItem="TyQ-s1-dFj" firstAttribute="baseline" secondItem="aCn-u6-Jog" secondAttribute="baseline" id="OQf-Om-glc"/>
-                    <constraint firstItem="9ZL-Zf-1qi" firstAttribute="top" secondItem="EiT-Mj-1SZ" secondAttribute="top" constant="20" symbolic="YES" id="adb-NE-FKi"/>
-                    <constraint firstItem="TyQ-s1-dFj" firstAttribute="leading" secondItem="aCn-u6-Jog" secondAttribute="trailing" constant="38" id="bAv-3j-ycO"/>
-                    <constraint firstItem="NRb-I6-Jnx" firstAttribute="top" secondItem="9ZL-Zf-1qi" secondAttribute="bottom" constant="14" id="ewn-kg-tjL"/>
-                    <constraint firstItem="rqU-ZR-2Hb" firstAttribute="leading" secondItem="9ZL-Zf-1qi" secondAttribute="trailing" constant="12" symbolic="YES" id="fCF-ji-OIN"/>
-                    <constraint firstItem="aCn-u6-Jog" firstAttribute="leading" secondItem="rqU-ZR-2Hb" secondAttribute="trailing" constant="12" symbolic="YES" id="izE-Dv-KVt"/>
-                    <constraint firstItem="rqU-ZR-2Hb" firstAttribute="baseline" secondItem="aCn-u6-Jog" secondAttribute="baseline" id="vWK-dH-a2S"/>
                 </constraints>
             </view>
         </window>

@@ -1,29 +1,38 @@
 class MessagesWindow < NSWindowController
   extend IB
-
+  
+  ACTION_BUTTONS = [:add, :remove, :info]
+  
   outlet :messagesController, NSArrayController
   outlet :tableScrollView, NSScrollView
 
   attr_accessor :messages
-  attr_accessor :selected
 
   def windowDidLoad
-    @messages = Message.generateDumb 100
-    @selected = []
+    @messages = Message.generateDumb 10
     @messagesController.content = @messages
   end
 
   def add_new_message sender
     @messagesController.addObject Message.generateDumb
   end
+  
+  def action sender
+    send ACTION_BUTTONS[sender.selectedSegment]
+  end
 
-  def inspect sender
-    p messagesController.selectedObjects.inspect
-    p @selected.inspect
+  def add
+    @messagesController.insertObject(
+      Message.generateDumb,
+      atArrangedObjectIndex:@messagesController.selectionIndex + 1)
   end
   
-  def segment_button sender
-    p sender.selectedSegment.inspect
+  def remove
+    @messagesController.removeObjectsAtArrangedObjectIndexes @messagesController.selectionIndexes
+  end
+  
+  def info
+    p 'info ' + @messagesController.selectedObjects.inspect
   end
 
 end
