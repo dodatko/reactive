@@ -8,7 +8,7 @@ class MessagesWindow < NSWindowController
   attr_accessor :messages
 
   def windowDidLoad
-    @messages = Message.generateDumb 100500
+    @messages = Message.generateDumb 15
     @messagesController.content = @messages
   end
 
@@ -29,6 +29,10 @@ class MessagesWindow < NSWindowController
 
   def info
     p 'info ' + @messagesController.selectedObjects.inspect
+  end
+
+  def mark_as_read sender
+    @messagesController.selectedObjects.inspect
   end
 
 end

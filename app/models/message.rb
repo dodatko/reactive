@@ -1,6 +1,6 @@
 class Message
 
-  attr_accessor :sender, :sent, :subject, :body
+  attr_accessor :sender, :sent, :subject, :body, :read_flag
 
   def initialize args
     args.each { |k,v| self.instance_variable_set("@#{k}".to_sym, v) }
@@ -13,7 +13,8 @@ class Message
         :sender   => "Test message #{i.to_s}",
         :sent     => "#{i.to_s}/#{i.to_s}/#{i.to_s}",
         :subject  => "This is a message #{i.to_s} subject",
-        :body     => "This is a text for message #{i.to_s}. " * 5
+        :body     => "This is a text for message #{i.to_s}. " * 5,
+        :read_flag => false
       )
     end
     n > 1 ? messages : messages.first
