@@ -72,6 +72,11 @@
                                                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <connections>
+                                                                                <binding destination="jDS-c2-fPx" name="fontBold" keyPath="objectValue.read_flag" id="XsZ-9I-B6w">
+                                                                                    <dictionary key="options">
+                                                                                        <string key="NSValueTransformerName">NSNegateBoolean</string>
+                                                                                    </dictionary>
+                                                                                </binding>
                                                                                 <binding destination="jDS-c2-fPx" name="value" keyPath="objectValue.sender" id="IBO-JL-RKP"/>
                                                                             </connections>
                                                                         </textField>
