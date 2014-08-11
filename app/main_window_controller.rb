@@ -31,8 +31,8 @@ class MessagesWindow < NSWindowController
     p 'info ' + @messagesController.selectedObjects.inspect
   end
 
-  def mark_as_read sender
-    @messagesController.selectedObjects.inspect
+  def tableViewSelectionDidChange notification
+    @messagesController.selectedObjects.each { |m| m.read_flag = true }
   end
 
 end
