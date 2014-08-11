@@ -1,4 +1,5 @@
 class AppDelegate
+
   def applicationDidFinishLaunching(notification)
     buildMenu
     buildWindow
@@ -6,7 +7,7 @@ class AppDelegate
 
   def buildWindow
     @main = MessagesWindow.alloc.initWithWindowNibName('Messages')
-    
+
     # p '-------------------- ' + @main.window.inspect
     # # @main.makeKeyAndOrderFront(self)
     @main.window
