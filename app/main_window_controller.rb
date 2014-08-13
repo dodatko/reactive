@@ -4,10 +4,14 @@ class MessagesWindow < NSWindowController
   ACTION_BUTTONS = [:add, :remove, :info]
 
   outlet :messagesController, NSArrayController
+  outlet :contactsController, NSArrayController
 
-  attr_accessor :messages
+  attr_accessor :contacts
 
   def windowDidLoad
+    @contacts = Contact.generateDumb 15
+    @contactsController.content = @contacts
+
     @messages = Message.generateDumb 15
     @messagesController.content = @messages
   end
