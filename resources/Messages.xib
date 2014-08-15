@@ -16,7 +16,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="1070" height="751"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="2253" height="1238"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1070" height="751"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -62,7 +62,7 @@
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                                     <subviews>
                                                                         <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OqO-yd-Ezh">
-                                                                            <rect key="frame" x="6" y="60" width="139" height="17"/>
+                                                                            <rect key="frame" x="7" y="60" width="139" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="width" constant="219" id="cgL-AM-sl3"/>
@@ -80,15 +80,15 @@
                                                                             </connections>
                                                                         </textField>
                                                                         <textField verticalHuggingPriority="749" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="i4D-Yw-rQG">
-                                                                            <rect key="frame" x="159" y="60" width="64" height="17"/>
+                                                                            <rect key="frame" x="150" y="60" width="73" height="17"/>
                                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                             <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" alignment="right" title="Table View Cell" id="Amz-vP-BN6">
-                                                                                <font key="font" metaFont="titleBar" size="12"/>
+                                                                                <font key="font" metaFont="cellTitle"/>
                                                                                 <color key="textColor" name="selectedMenuItemColor" catalog="System" colorSpace="catalog"/>
                                                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                                                             </textFieldCell>
                                                                             <connections>
-                                                                                <binding destination="jDS-c2-fPx" name="value" keyPath="objectValue.messages.count" id="8iq-oo-fxa"/>
+                                                                                <binding destination="jDS-c2-fPx" name="value" keyPath="objectValue.unread_messages_count" id="ffz-1h-uAr"/>
                                                                             </connections>
                                                                         </textField>
                                                                     </subviews>
@@ -384,7 +384,7 @@
                 <binding destination="0Hk-H0-19i" name="contentArray" keyPath="selection.messages" id="kvT-NB-xkX"/>
             </connections>
         </arrayController>
-        <arrayController objectClassName="contacts" id="0Hk-H0-19i" userLabel="Contacts Controller">
+        <arrayController objectClassName="contacts" editable="NO" id="0Hk-H0-19i" userLabel="Contacts Controller">
             <declaredKeys>
                 <string>name</string>
                 <string>messages</string>

@@ -5,7 +5,7 @@ class Message
   def initialize args
     args.each { |k,v| self.instance_variable_set("@#{k}".to_sym, v) }
   end
-
+  
   def self.generateDumb n = 1
     messages = []
     n.times do |i|
@@ -19,5 +19,12 @@ class Message
     end
     n > 1 ? messages : messages.first
   end
+  
+  # def read_flag=value
+  #   willChangeValueForKey 'read_flag'
+  #   p 'read flag'
+  #   @read_flag = value
+  #   didChangeValueForKey 'read_flag'
+  # end
 
 end
