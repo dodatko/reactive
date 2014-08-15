@@ -9,11 +9,8 @@ class MessagesWindow < NSWindowController
   attr_accessor :contacts
 
   def windowDidLoad
-    @contacts = Contact.generateDumb 15
+    @contacts = DumbFactory.contacts
     @contactsController.content = @contacts
-
-    @messages = Message.generateDumb 15
-    @messagesController.content = @messages
   end
 
   def action sender
@@ -21,7 +18,13 @@ class MessagesWindow < NSWindowController
   end
 
   def add
-    @messagesController.addObject Message.generateDumb
+    @messagesController.addObject Message.new(
+      :sender   => "Test message",
+      :sent     => "11/10/2014",
+      :subject  => "This is a subject",
+      :body     => "This is a text for message. " * 5,
+      :read_flag => false
+    )
     # @messagesController.insertObject(
     #   Message.generateDumb,
     #   atArrangedObjectIndex:@messagesController.selectionIndex + 1)
@@ -36,7 +39,16 @@ class MessagesWindow < NSWindowController
   end
 
   def tableViewSelectionDidChange notification
+    mark_as_read nil
+  end
+
+  def mark_as_unread sender
+    @messagesController.selectedObjects.each { |m| m.read_flag = false }
+  end
+
+  def mark_as_read sender
     @messagesController.selectedObjects.each { |m| m.read_flag = true }
   end
+
 
 end

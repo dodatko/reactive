@@ -16,7 +16,7 @@
             <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
             <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
             <rect key="contentRect" x="196" y="240" width="1070" height="751"/>
-            <rect key="screenRect" x="0.0" y="0.0" width="1920" height="1058"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2253" height="1238"/>
             <view key="contentView" id="EiT-Mj-1SZ">
                 <rect key="frame" x="0.0" y="0.0" width="1070" height="751"/>
                 <autoresizingMask key="autoresizingMask"/>
@@ -246,6 +246,9 @@
                                                                         <constraint firstAttribute="trailing" secondItem="1Ks-JE-vkr" secondAttribute="trailing" constant="6" id="ttb-Ud-zlo"/>
                                                                         <constraint firstItem="FKP-RI-gKu" firstAttribute="top" secondItem="Fgt-Od-6py" secondAttribute="top" constant="4" id="zsb-Sa-zlN"/>
                                                                     </constraints>
+                                                                    <connections>
+                                                                        <outlet property="menu" destination="cx6-IH-CjZ" id="vWX-Hs-feG"/>
+                                                                    </connections>
                                                                 </tableCellView>
                                                             </prototypeCellViews>
                                                             <connections>
@@ -259,6 +262,7 @@
                                                     </tableColumns>
                                                     <connections>
                                                         <outlet property="delegate" destination="-2" id="fKt-gJ-iVs"/>
+                                                        <outlet property="menu" destination="cx6-IH-CjZ" id="oLg-wv-ajc"/>
                                                     </connections>
                                                 </tableView>
                                             </subviews>
@@ -393,6 +397,22 @@
                 <binding destination="-2" name="contentArray" keyPath="contacts" id="eEm-nA-X79"/>
             </connections>
         </arrayController>
+        <menu id="cx6-IH-CjZ">
+            <items>
+                <menuItem title="Mark as Read" id="YcY-Z5-hbl">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="mark_as_read" target="-2" id="348-fg-qhr"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Mark as Unread" id="tcs-XJ-M8m">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="mark_as_unread:" target="-2" id="VZ7-QF-RV4"/>
+                    </connections>
+                </menuItem>
+            </items>
+        </menu>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="8" height="8"/>
