@@ -10,9 +10,13 @@ class Contact < Base
 
   def observeValueForKeyPath(keyPath, ofObject:object, change:change, context:context)
     NSLog("read_flag change notification: #{keyPath} #{context.inspect}")
-
+    # force reread "unread_messages_count"
     willChangeValueForKey "unread_messages_count"
     didChangeValueForKey "unread_messages_count"
   end
+  
+  # def keyPathsForValuesAffectingValueForKey
+  #
+  # end
 
 end

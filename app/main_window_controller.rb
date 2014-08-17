@@ -47,7 +47,7 @@ class MessagesWindow < NSWindowController
   end
 
   def mark_as_read sender
-    @messagesController.selectedObjects.each { |m| m.read_flag = true }
+    @messagesController.selectedObjects.each { |m| m.read_flag = true unless m.read_flag }
   end
 
 

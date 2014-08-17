@@ -1,9 +1,10 @@
 class DumbFactory
 
   def self.contacts n = 2
+    names = ['bbbbbb', 'aaaaa', 'cccccccccccc']
     contacts = []
-    n.times do |i|
-      contact = Contact.new :name => 'Name Of Sender'
+    names.each do |name|
+      contact = Contact.new :name => name
 
       messages = []
       5.times do |i|
@@ -17,7 +18,7 @@ class DumbFactory
         message.addObserver(contact,
           forKeyPath:'read_flag',
           options:NSKeyValueObservingOptionNew,
-          context:nil)
+          context:'read_flag')
         messages << message
       end
       contact.messages = messages
