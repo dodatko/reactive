@@ -1,10 +1,13 @@
 PODS:
   - RFOverlayScrollView (0.3)
+  - SORelativeDateTransformer (1.1.10)
 
 DEPENDENCIES:
   - RFOverlayScrollView
+  - SORelativeDateTransformer
 
 SPEC CHECKSUMS:
   RFOverlayScrollView: f7ea640278e9882c8b2d9d3a957c9630d93418dd
+  SORelativeDateTransformer: de7936811c9988af8e129a097af48c828f933f5f
 
 COCOAPODS: 0.32.1
