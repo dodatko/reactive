@@ -462,6 +462,20 @@
                 </menuItem>
             </items>
         </menu>
+        <customView id="hbC-oy-cg6">
+            <rect key="frame" x="0.0" y="0.0" width="655" height="94"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+            <subviews>
+                <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="adF-Ah-TRV">
+                    <rect key="frame" x="374" y="30" width="82" height="32"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                    <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wdV-C9-CWj">
+                        <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
+            </subviews>
+        </customView>
     </objects>
     <resources>
         <image name="NSAddTemplate" width="8" height="8"/>

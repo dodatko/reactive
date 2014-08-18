@@ -18,8 +18,8 @@ Motion::Project::App.setup do |app|
   app.icon = 'icon.icns'
   
   app.pods do
-    # Details here: https://github.com/rheinfabrik/RFOverlayScrollView
     pod 'RFOverlayScrollView'
     pod 'SORelativeDateTransformer'
+    # pod 'INAppStoreWindow'
   end
 end
