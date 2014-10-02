@@ -1,6 +1,7 @@
 class DumbFactory
 
-  def self.contacts n = 2
+  def self.contacts
+    message_id = 0
     names = ['Михаил Биленко', 'Сергей Качан', 'Андрей Шрамко', 'Алиса Кондратьева', 'Слава Додатко']
     contacts = []
     names.each do |name|
@@ -8,8 +9,10 @@ class DumbFactory
 
       messages = []
       
-      5.times do |i|
+      99.times do |i|
+        p message_id
         message = Message.new(
+          :id       => message_id += 1,
           :sender   => names[Random.rand(names.count)],
           :sent     => DumbFactory.random_date(3),
           :subject  => "In favour of #{names[Random.rand(names.count)]}",

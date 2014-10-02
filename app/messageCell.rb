@@ -1,3 +1,5 @@
+# WTF???
+
 class MessageCell < NSTableCellView
   extend IB
 

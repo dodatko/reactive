@@ -33,7 +33,7 @@ class MessagesWindow < NSWindowController
   end
 
   def info
-    p 'info ' + @messagesController.selectedObjects.inspect
+    p 'selectedObjects ' + @messagesController.selectedObjects.inspect
   end
 
   def tableViewSelectionDidChange notification
